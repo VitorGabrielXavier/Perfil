@@ -6,6 +6,10 @@
     font-family: 'Open Sans', sans-serif;
 }
 
+html{
+    scroll-behavior: smooth;
+}
+
 body {
     background: #f9f9f9;
     overflow-x: hidden;
@@ -15,6 +19,8 @@ body {
 hr {
     border: 1px solid #dddddd;
     background: #dddddd;
+    position: sticky;
+    top: 55px;
 }
 
 /* ================= HEADER ================= */
@@ -26,10 +32,13 @@ hr {
     justify-content: space-between;
     padding: 0 50px;
     background: #fff;
+    position: sticky;
+    top: 0;
+    opacity: 0.8;
 }
 
 /* ================= NAV =================  */
-.nav{
+.nav {
     display: flex;
     align-items: center;
     gap: 20px;
@@ -59,6 +68,7 @@ hr {
     color: #333;
     transition: color 0.2s ease;
     overflow: hidden;
+    
 }
 
 .nav a::before {
@@ -70,10 +80,6 @@ hr {
     height: 1px;
     background: transparent;
     transition: right 0.3s ease;
-}
-
-.nav a:hover{
-    transform: scale(1.1);
 }
 
 .nav a:hover::before {
@@ -199,7 +205,7 @@ hr {
         padding: 20px 10px;
         border-bottom-left-radius: 20px;
         transform: translateX(100%);
-        transition: transform 0.4s ease-in-out ;
+        transition: transform 0.4s ease-in-out;
     }
 
     /* Quando abrir o menu (JS adiciona a classe) */
@@ -246,4 +252,113 @@ hr {
         height: auto;
         width: auto;
     }
+}
+
+main {
+    width: 100%;
+    height: calc(100% - 58.51px);
+    display: grid;
+    grid-template-columns: repeat(2, 50%);
+    grid-template-rows: auto auto;
+}
+
+.img-profile {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    grid-column: 1 / 2;
+}
+
+.img-profile img {
+    width: 250px;
+    border-radius: 50%;
+    box-shadow: 0px 27px 86px 18px rgba(0,0,0,0.43);
+    -webkit-box-shadow: 0px 27px 86px 18px rgba(0,0,0,0.43);
+    -moz-box-shadow: 0px 27px 86px 18px rgba(0,0,0,0.43);
+}
+
+main .bio {
+    padding: 50px;
+    grid-column: 2 / 3;
+}
+
+main .bio .me{
+    margin-bottom: 30px;
+    display: flex;
+    align-items: end;
+    gap: 20px;
+    font-size: 20px;
+}
+
+main .me .my-name-title {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 900;
+    margin-left: 30px;
+    font-size: 40px;
+}
+
+main .me .my-name-span {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 16px;
+    color: #0d0d9e;
+    font-weight: 400;
+}
+
+main .bio .description{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 24px;
+    gap: 30px;
+}
+
+main .description p {
+    line-height: 30px;
+}
+
+main .description .bio-button{
+    display: flex;
+    align-items: center;
+    gap: 45px;
+}
+
+.btn-main{
+    width: 200px;
+    height: 45px;
+    border-radius: 10px;
+    border: none;
+    background: #fff;
+    font-size: 25px;
+    cursor: pointer;
+    transition: transform 0.5s ease;
+}
+
+.btn-main:hover{
+    transform: translateY(-5px);
+}
+
+.btn-main:active{
+    transform: translateY(3px) scale(0.9);
+}
+
+main .bio-button .btn-protfolio{
+    background: #0000ff;
+    color: #fff;
+    font-weight: 500;
+    width: 180px;
+    padding:  8px 0 0 22px;
+    text-decoration: none;
+}
+
+main .bio-button .btn-curriculo{
+    border: solid 2px;
+    font-size: 22px;
+}
+
+main .linha-main{
+    grid-column: 1 / -1;
+}
+
+main .work{
+    grid-column: 1 / -1;
 }

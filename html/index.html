@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -14,7 +15,9 @@
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <linkhref="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700&family=Open+Sans:wght@100;200;300;400;500;600;700&display=swap" rel="stylesheet">
+    <linkhref="https:
+        //fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700&family=Open+Sans:wght@100;200;300;400;500;600;700&display=swap"
+        rel="stylesheet">
 </head>
 
 <body>
@@ -30,15 +33,15 @@
 
         <!-- BOTÃO MENU MOBILE -->
         <i class="fa-solid fa-bars menu-toggle-bar" onclick="menuToggle()"></i>
-        
+
         <!-- NAV -->
         <nav class="nav">
             <div class="mobile-menu">
                 <div class="mobile-links">
-                    <a href="#">Início</a>
-                    <a href="#">Sobre</a>
-                    <a href="#">Portfólio</a>
-                    <a href="#">Contato</a>
+                    <a href="#inicio">Início</a>
+                    <a href="#Sobre">Sobre</a>
+                    <a href="#Portfolio">Portfólio</a>
+                    <a href="#Contato">Contato</a>
                     <button class="contrate">Contrate-me</button>
                 </div>
             </div>
@@ -47,28 +50,70 @@
 
     <hr>
 
-    <main>
-        <img width="50px" src="/img/my-img-profile.png" alt="imagem perfil">
+    <main id="inicio">
+        <div class="img-profile">
+            <img width="50px" src="/img/my-img-profile.png" alt="imagem perfil">
+        </div>
 
         <div class="bio">
-            <h1><span>olá, eu sou</span> <br> Vitor Xavier</h1>
+            <div class="me">
+                <h1 class="my-name-title"><span class="my-name-span">olá, eu sou</span> <br> Vitor Xavier</h1>
 
-            <p class="">junior web developer in São Bernardo do Campo.</p>
+                <p class="profision"><strong>Programador front end.</strong></p>
+            </div>
 
-            <p>Um programador web júnior desenvolve e ajusta sites usando HTML, 
-            CSS e JavaScript, corrige erros simples e auxilia em projetos sob
-            orientação de profissionais mais experientes.</p>
+            <div class="description">
+                <p>Um programador front-end desenvolve a parte visual e interativa de sites e aplicações, cuidando do
+                    que o
+                    usuário vê e utiliza, usando principalmente HTML, CSS e JavaScript.</p>
+
+
+                <div class="bio-button">
+                    <a href="#Portfolio" class="btn-main btn-protfolio">Ver Portfólio</a>
+                    <button class="btn-main btn-curriculo">Baixar Currículo</button>
+                </div>
+            </div>
         </div>
 
-        <div class="bio-button">
-            <button class="protfolio">Ver Portfólio</button>
-            <button class="curriculo">Baixar Currículo</button>
+        <hr class="linha-main">
+
+        <div class="work">
+            <h2>O que eu faço</h2>
+
+            <p>Minhas habilidades abrngem as tecnologias HTML, CSS e JavaScript</p>
+
+            <div class="card card-html">
+                <!-- imagem html -->
+                <h3>HTML</h3>
+
+                <p>HTML é a linguagem usada para estruturar o conteúdo de páginas da web, definindo elementos como
+                    textos, imagens, links e seções.</p>
+            </div>
+
+        </div>
+
+        <div class="card card-css">
+            <!-- imagem html -->
+            <h3>CSS</h3>
+
+            <p>CSS é a linguagem usada para estilizar páginas da web, controlando cores, fontes, layouts e a aparência
+                dos elementos.
+            </p>
+        </div>
+
+        </div>
+
+        <div class="card card-js">
+            <!-- imagem html -->
+            <h3>JavaScript</h3>
+
+            <p>JavaScript é a linguagem usada para adicionar interatividade e comportamento dinâmico às páginas da web.
+            </p>
         </div>
     </main>
-
-    <hr>
 
     <!-- JS -->
     <script src="/js/script.js"></script>
 </body>
+
 </html>

@@ -145,121 +145,11 @@ hr {
     cursor: pointer;
 }
 
-/* ================= RESPONSIVO ================= */
-
-/* Tablets */
-@media (max-width: 1000px) {
-    .header {
-        padding: 0 25px;
-    }
-
-    .mobile-links {
-        gap: 20px;
-    }
-
-    .header-name {
-        font-size: 25px;
-    }
-}
-
-/* Tablets menores */
-@media (max-width: 850px) {
-    .header {
-        padding: 0 20px;
-    }
-
-    .nav a {
-        font-size: 16px;
-    }
-
-    .header-name {
-        font-size: 20px;
-    }
-
-    .contrate {
-        width: 100px;
-        height: 30px;
-        font-size: 13px;
-    }
-}
-
-/* ================= MOBILE ================= */
-@media (max-width: 700px) {
-    .header {
-        padding: 0 10px;
-    }
-
-    /* Menu hamburguer aparece */
-    .menu-toggle-bar {
-        display: block;
-    }
-
-    /* NAV MOBILE (OFF-CANVAS) */
-    .nav {
-        position: fixed;
-        top: 55px;
-        right: 0;
-        width: 50%;
-        height: 42dvh;
-        background: #fff;
-        padding: 20px 10px;
-        border-bottom-left-radius: 20px;
-        transform: translateX(100%);
-        transition: transform 0.4s ease-in-out;
-    }
-
-    /* Quando abrir o menu (JS adiciona a classe) */
-    .nav.active {
-        transform: translateX(0);
-    }
-
-    .mobile-menu {
-        width: 100%;
-        height: 100%;
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-start;
-        align-items: center;
-    }
-
-    .mobile-links {
-        align-items: center;
-        justify-content: center;
-        flex-direction: column;
-        gap: 25px;
-    }
-
-    .nav a {
-        font-size: 20px;
-    }
-
-    .contrate {
-        width: 135px;
-        height: 38px;
-        font-size: 18px;
-    }
-}
-
-/* GARANTIA ABSOLUTA: DESKTOP */
-@media (min-width: 701px) {
-    .menu-toggle-bar {
-        display: none !important;
-    }
-
-    .nav {
-        display: flex !important;
-        position: static;
-        height: auto;
-        width: auto;
-    }
-}
-
-main {
+.section-bio {
     width: 100%;
     height: calc(100% - 58.51px);
     display: grid;
     grid-template-columns: repeat(2, 50%);
-     
 }
 
 .img-profile {
@@ -392,8 +282,7 @@ main .container-work p {
 .card {
     display: grid;
     grid-template-columns:
-     repeat(auto-fit,
-            minmax(250px, 50px));
+     repeat(auto-fit, minmax(250px, 1fr));
     gap: 50px;
     justify-content: center;
     align-items: center;
@@ -429,7 +318,7 @@ main .container-work p {
 }
 
 .card-tag .js {
-    color: #F7DF1E;
+    color: #F7DF1E; 
 }
 
 .card-tag h3 {
@@ -439,4 +328,169 @@ main .container-work p {
 .card-tag h3 {
     font-size: 25px;
     margin-bottom: 15px;
+}
+
+/* ================= RESPONSIVO ================= */
+
+/* Tablets */
+@media (max-width: 1000px) {
+    .header {
+        padding: 0 25px;
+    }
+
+    .mobile-links {
+        gap: 20px;
+    }
+
+    .header-name {
+        font-size: 25px;
+    }
+
+    main .bio .me {
+        font-size: 13px;
+    }
+
+    main .me .my-name-title {
+        font-size: 30px;
+    }
+
+    main .bio .descripton {
+        font-size: 15px;
+    }
+
+    .btn-main {
+        width: 175px;
+        font-size: 20px;
+    }
+
+    main .bio-button .btn-protfolio{
+        width: 160px;
+        padding: 10px 0 0 25px;
+    }
+
+    main .description .bio-button{
+        gap: 25px;
+    }
+}
+
+/* Tablets menores */
+@media (max-width: 850px) {
+    .header {
+        padding: 0 20px;
+    }
+
+    .nav a {
+        font-size: 16px;
+    }
+
+    .header-name {
+        font-size: 20px;
+    }
+
+    .contrate {
+        width: 100px;
+        height: 30px;
+        font-size: 13px;
+    }
+
+    main .bio{
+        padding-left: 0;
+    }
+
+    main .me .my-name-title {
+        font-size: 25px;
+    }
+
+    .main .bio-button .btn-curriculo {
+        font-size: 16px;
+    }
+
+    main .bio-button .btn-protfolio{
+        width: 160px;
+        padding: 10px 0 0 25px;
+    }
+
+    main .description .bio-button{
+        gap: 20px;
+    }
+}
+
+/* ================= MOBILE ================= */
+@media (max-width: 700px) {
+    .header {
+        padding: 0 10px;
+    }
+
+    /* Menu hamburguer aparece */
+    .menu-toggle-bar {
+        display: block;
+    }
+
+    /* NAV MOBILE (OFF-CANVAS) */
+    .nav {
+        position: fixed;
+        top: 55px;
+        right: 0;
+        width: 50%;
+        height: 42dvh;
+        background: #fff;
+        padding: 20px 10px;
+        border-bottom-left-radius: 20px;
+        transform: translateX(100%);
+        transition: transform 0.4s ease-in-out;
+    }
+
+    /* Quando abrir o menu (JS adiciona a classe) */
+    .nav.active {
+        transform: translateX(0);
+    }
+
+    .mobile-menu {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+    }
+
+    .mobile-links {
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        gap: 25px;
+    }
+
+    .nav a {
+        font-size: 20px;
+    }
+
+    .contrate {
+        width: 135px;
+        height: 38px;
+        font-size: 18px;
+    }
+
+    .section-bio {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .img-profile {
+        height: 350px;
+    }
+}
+
+/* GARANTIA ABSOLUTA: DESKTOP */
+@media (min-width: 701px) {
+    .menu-toggle-bar {
+        display: none !important;
+    }
+
+    .nav {
+        display: flex !important;
+        position: static;
+        height: auto;
+        width: auto;
+    }
 }
